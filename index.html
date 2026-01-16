@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AdGen AI - منصة ذكاء اصطناعي متقدمة لتوليد المحتوى الإعلاني المرئي بجودة سينمائية">
+    <meta name="keywords" content="ذكاء اصطناعي, توليد فيديو, صور AI, محتوى إعلاني, Gemini, Kling AI">
+    <meta name="author" content="AdGen AI">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AdGen AI - خبير إبداعي في جيبك">
+    <meta property="og:description" content="حوّل أفكارك إلى محتوى مرئي مذهل بمساعدة ذكاء اصطناعي لا يصدق">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+
+    <title>AdGen AI - خبير إبداعي في جيبك</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/sections.css">
+    <link rel="stylesheet" href="./assets/css/use-cases.css">
+    <link rel="stylesheet" href="./assets/css/ai-showcase.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">
+            <svg width="100" height="100" viewBox="0 0 40 40">
+                <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" fill="url(#logoGradient)" />
+                <circle cx="20" cy="20" r="5" fill="white" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366F1" />
+                            <stop offset="100%" style="stop-color:#EC4899" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" fill="url(#logoGradient)" />
+                    <circle cx="20" cy="20" r="5" fill="white" />
+                </svg>
+                <span class="logo-text">AdGen AI</span>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link" data-i18n="nav_features">المميزات</a>
+                <a href="#how-it-works" class="nav-link" data-i18n="nav_how_it_works">كيف يعمل</a>
+                <a href="#tech-stack" class="nav-link" data-i18n="nav_tech">التقنيات</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav_pricing">التسعير</a>
+                <a href="#faq" class="nav-link" data-i18n="nav_faq">الأسئلة</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn btn-secondary language-toggle" id="langToggle">
+                    <span data-i18n="lang_name">English</span>
+                </button>
+                <button class="btn btn-primary" data-i18n="nav_signup">ابدأ مجاناً</button>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <canvas id="particlesCanvas"></canvas>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <div class="hero-badge">
+                        <span class="badge-icon">✨</span>
+                        <span data-i18n="hero_badge">مدعوم بـ Google Gemini 3 & Kling AI</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="gradient-text">AdGen AI</span><br>
+                        <span data-i18n="hero_title">خبير إبداعي في جيبك</span>
+                    </h1>
+
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">
+                        حوّل أفكارك إلى محتوى مرئي <strong>مذهل</strong> بمساعدة ذكاء اصطناعي
+                        <br class="hide-mobile">لا يكتفي بالتنفيذ - بل <strong>يفكر، يحلل ويبدع</strong>
+                    </p>
+
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-lg">
+                            <span data-i18n="hero_cta_primary">ابدأ الإنشاء مجاناً</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 5L17 12L10 19" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline btn-lg" id="demoBtn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2" />
+                                <path d="M8 6L14 10L8 14V6Z" fill="currentColor" />
+                            </svg>
+                            <span data-i18n="hero_cta_secondary">شاهد العرض التوضيحي</span>
+                        </button>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" data-count="10000">0</div>
+                            <div class="stat-label" data-i18n="hero_stat_creators">مستخدم نشط</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" data-count="50000">0</div>
+                            <div class="stat-label" data-i18n="hero_stat_generated">محتوى مُولّد</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">99.9%</div>
+                            <div class="stat-label" data-i18n="hero_stat_uptime">معدل التوفر</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                    <div class="mockup-container">
+                        <div class="mockup-glow"></div>
+                        <div class="mockup-screen">
+                            <div class="chat-demo">
+                                <div class="chat-message user">
+                                    <div class="message-bubble" data-i18n="hero_chat_user">أريد فيديو سينمائي لسيارة
+                                        رياضية</div>
+                                </div>
+                                <div class="chat-message ai">
+                                    <div class="avatar"></div>
+                                    <div class="message-bubble">
+                                        <div class="thinking-dots">
+                                            <span></span><span></span><span></span>
+                                        </div>
+                                        <div class="message-text" data-i18n="hero_chat_ai">
+                                            رائع! لنخلق شيئاً مذهلاً.<br>
+                                            - ما نوع السيارة؟ رياضية حديثة أم كلاسيكية؟<br>
+                                            - الإضاءة: غروب ذهبي أم ليل نيون؟
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-reflection"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>اسحب للأسفل</span>
+        </div>
+    </section>
+
+    <!-- AI Creative Director Showcase -->
+    <section class="ai-showcase" id="ai-showcase">
+        <div class="ai-showcase-background">
+            <canvas id="aiParticles"></canvas>
+            <div class="ai-orb ai-orb-1"></div>
+            <div class="ai-orb ai-orb-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge" data-i18n="ai_badge">🧠 المساعد الذكي</span>
+                <h2 class="section-title" data-i18n="ai_title">شاهد <span class="gradient-text">Creative Director</span>
+                    في العمل</h2>
+                <p class="section-subtitle" data-i18n="ai_subtitle">ليس مجرد AI - بل خبير إبداعي يفكر، يحلل، ويصنع
+                    الكمال</p>
+            </div>
+
+            <div class="ai-showcase-grid">
+                <!-- Column 1: User Input -->
+                <div class="ai-column" data-aos="fade-right" data-aos-delay="100">
+                    <div class="column-header">
+                        <span class="column-icon">💬</span>
+                        <h3 data-i18n="ai_col1_title">ما تكتبه</h3>
+                    </div>
+                    <div class="chat-window">
+                        <div class="chat-message user-msg">
+                            <div class="msg-avatar">👤</div>
+                            <div class="msg-bubble" data-i18n="ai_user_initial">أريد فيديو لسيارة رياضية</div>
+                        </div>
+                        <div class="chat-message ai-msg" id="aiResponse1">
+                            <div class="msg-avatar">🤖</div>
+                            <div class="msg-bubble">
+                                <div class="typing-indicator">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="msg-content hidden">
+                                    <p data-i18n="ai_response_initial">رائع! لنخلق شيئاً سينمائياً 🎬</p>
+                                    <p class="ai-question" data-i18n="ai_question_prompt">لجعله مثالياً، أخبرني:</p>
+                                    <ul>
+                                        <li data-i18n="ai_q1">✓ نوع السيارة؟ (Ferrari, Lamborghini...)</li>
+                                        <li data-i18n="ai_q2">✓ الإضاءة؟ (غروب، ليل نيون، صباح...)</li>
+                                        <li data-i18n="ai_q3">✓ الحركة؟ (سرعة، drift، ثابتة)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-message user-msg hidden" id="userResponse2">
+                            <div class="msg-avatar">👤</div>
+                            <div class="msg-bubble" data-i18n="ai_user_refined">Ferrari حمراء، غروب ذهبي، drift سريع
+                            </div>
+                        </div>
+                        <div class="chat-message ai-msg hidden" id="aiResponse2">
+                            <div class="msg-avatar">🤖</div>
+                            <div class="msg-bubble">
+                                <div class="success-badge" data-i18n="ai_vision_complete">✅ رؤية كاملة</div>
+                                <p data-i18n="ai_success_msg">ممتاز! الآن لدي كل ما أحتاجه لصنع تحفة سينمائية 🎨</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: AI Thinking -->
+                <div class="ai-column thinking-column" data-aos="fade-up" data-aos-delay="200">
+                    <div class="column-header">
+                        <span class="column-icon">🧠</span>
+                        <h3 data-i18n="ai_col2_title">عملية التفكير</h3>
+                    </div>
+                    <div class="thinking-panel">
+                        <div class="code-display">
+                            <div class="code-line">
+                                <span class="code-key">"intent_analysis":</span>
+                                <span class="code-value" data-i18n="ai_think_intent">"فيديو سينمائي لسيارة"</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-key">"missing_info":</span>
+                                <span class="code-array">[</span>
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-string">"نوع السيارة"</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-string">"أسلوب الإضاءة"</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-string">"نوع الحركة"</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-array">]</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-key">"confidence_score":</span>
+                                <span class="code-number" id="confidenceValue">45</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="code-key">"reasoning":</span>
+                                <span class="code-value" data-i18n="ai_think_reasoning">"نحتاج تفاصيل للجودة
+                                    السينمائية"</span>
+                            </div>
+                        </div>
+
+                        <!-- Confidence Meter -->
+                        <div class="confidence-meter">
+                            <svg width="180" height="180" viewBox="0 0 180 180">
+                                <defs>
+                                    <linearGradient id="meterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ef4444" />
+                                        <stop offset="50%" style="stop-color:#f59e0b" />
+                                        <stop offset="100%" style="stop-color:#10b981" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="90" cy="90" r="70" fill="none" stroke="rgba(255,255,255,0.1)"
+                                    stroke-width="12" />
+                                <circle id="confidenceCircle" cx="90" cy="90" r="70" fill="none"
+                                    stroke="url(#meterGradient)" stroke-width="12" stroke-linecap="round"
+                                    stroke-dasharray="440" stroke-dashoffset="440" transform="rotate(-90 90 90)" />
+                                <text id="confidenceText" x="90" y="95" text-anchor="middle" font-size="36"
+                                    font-weight="700" fill="#fff">45</text>
+                                <text x="90" y="115" text-anchor="middle" font-size="14" fill="rgba(255,255,255,0.6)"
+                                    data-i18n="ai_confidence_label">الثقة</text>
+                            </svg>
+                            <div class="confidence-label" id="confidenceLabel" data-i18n="ai_confidence_val">🟡 متوسط
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Before/After -->
+                <div class="ai-column" data-aos="fade-left" data-aos-delay="300">
+                    <div class="column-header">
+                        <span class="column-icon">✨</span>
+                        <h3 data-i18n="ai_col3_title">التحول السحري</h3>
+                    </div>
+                    <div class="prompt-comparison">
+                        <div class="prompt-card before-card">
+                            <div class="prompt-label" data-i18n="ai_prompt_original_label">❌ البرومبت الأصلي</div>
+                            <div class="prompt-text">
+                                <p>"فيديو سيارة رياضية"</p>
+                                <span class="char-count" data-i18n="ai_char_count_low">23 حرف</span>
+                            </div>
+                        </div>
+
+                        <div class="transform-arrow">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                <path d="M20 5L20 35M20 35L30 25M20 35L10 25" stroke="url(#arrowGradient)"
+                                    stroke-width="3" stroke-linecap="round" />
+                                <defs>
+                                    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6366F1" />
+                                        <stop offset="100%" style="stop-color:#EC4899" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="prompt-card after-card">
+                            <div class="prompt-label" data-i18n="ai_prompt_enhanced_label">✅ بعد التحسين بالذكاء</div>
+                            <div class="prompt-text">
+                                <p>"<span class="highlight">Cinematic slow-motion</span> shot of a <span
+                                        class="highlight">Ferrari 488 GTB in Rosso Corsa red</span>, executing a <span
+                                        class="highlight">perfect drift maneuver</span> on a mountain pass during <span
+                                        class="highlight">golden hour</span>. Camera: <span class="highlight">Low-angle
+                                        tracking shot</span> with dynamic movement. Lighting: <span
+                                        class="highlight">Warm golden sunlight rim-lighting</span>, lens flares,
+                                    volumetric dust. Style: Fast & Furious meets automotive commercial. <span
+                                        class="highlight">4K, hyperrealistic</span>"</p>
+                                <span class="char-count" data-i18n="ai_char_count_high">350+ حرف</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Features Grid -->
+            <div class="ai-features-grid" data-aos="zoom-in" data-aos-delay="400">
+                <div class="ai-feature-item">
+                    <div class="feature-icon-circle">🎯</div>
+                    <h4 data-i18n="ai_feat_1_title">دقة سينمائية</h4>
+                    <p data-i18n="ai_feat_1_desc">معرفة عميقة بالإضاءة والكاميرات</p>
+                </div>
+                <div class="ai-feature-item">
+                    <div class="feature-icon-circle">💡</div>
+                    <h4 data-i18n="ai_feat_2_title">ذكاء استباقي</h4>
+                    <p data-i18n="ai_feat_2_desc">يطرح الأسئلة الصحيحة</p>
+                </div>
+                <div class="ai-feature-item">
+                    <div class="feature-icon-circle">🔄</div>
+                    <h4 data-i18n="ai_feat_3_title">تحسين تدريجي</h4>
+                    <p data-i18n="ai_feat_3_desc">من 45% إلى 95% ثقة</p>
+                </div>
+                <div class="ai-feature-item">
+                    <div class="feature-icon-circle">🌍</div>
+                    <h4 data-i18n="ai_feat_4_title">عربي/إنجليزي</h4>
+                    <p data-i18n="ai_feat_4_desc">يفهم كلا اللغتين بطلاقة</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="ai-cta" data-aos="fade-up" data-aos-delay="500">
+                <button class="btn btn-primary btn-xl glow-btn">
+                    <span data-i18n="ai_cta_smart">جرّب المساعد الذكي الآن</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 5L17 12L10 19" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                </button>
+                <p class="cta-note" data-i18n="ai_cta_note">مجاناً - بدون بطاقة ائتمان</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="problem-solution" id="problem-solution">
+        <div class="container">
+            <div class="section-split">
+                <!-- Problem Side -->
+                <div class="split-side problem-side" data-aos="fade-right">
+                    <div class="section-header">
+                        <span class="section-badge error" data-i18n="prob_badge">❌ التحديات</span>
+                        <h2 class="section-title" data-i18n="prob_title">المشكلة التي نحلها</h2>
+                    </div>
+
+                    <div class="problem-list">
+                        <div class="problem-item">
+                            <div class="problem-icon">⏰</div>
+                            <div class="problem-text">
+                                <h4 data-i18n="prob_1_title">وقت طويل ومُرهق</h4>
+                                <p data-i18n="prob_1_desc">توليد محتوى إعلاني احترافي يستغرق ساعات من العمل</p>
+                            </div>
+                        </div>
+
+                        <div class="problem-item">
+                            <div class="problem-icon">🤯</div>
+                            <div class="problem-text">
+                                <h4 data-i18n="prob_2_title">برومبتات معقدة</h4>
+                                <p data-i18n="prob_2_desc">الحاجة لخبرة تقنية في كتابة برومبتات فعّالة</p>
+                            </div>
+                        </div>
+
+                        <div class="problem-item">
+                            <div class="problem-icon">💸</div>
+                            <div class="problem-text">
+                                <h4 data-i18n="prob_3_title">أدوات متعددة ومكلفة</h4>
+                                <p data-i18n="prob_3_desc">اشتراكات متعددة في منصات مختلفة بتكاليف عالية</p>
+                            </div>
+                        </div>
+
+                        <div class="problem-item">
+                            <div class="problem-icon">📉</div>
+                            <div class="problem-text">
+                                <h4 data-i18n="prob_4_title">نتائج غير متسقة</h4>
+                                <p data-i18n="prob_4_desc">جودة متذبذبة تفتقر للاحترافية السينمائية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution Side -->
+                <div class="split-side solution-side" data-aos="fade-left">
+                    <div class="section-header">
+                        <span class="section-badge success" data-i18n="sol_badge">✨ الحل</span>
+                        <h2 class="section-title" data-i18n="sol_title">مع AdGen AI</h2>
+                    </div>
+
+                    <div class="solution-list">
+                        <div class="solution-item">
+                            <div class="solution-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <circle cx="16" cy="16" r="16" fill="url(#iconGradient1)" />
+                                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="solution-text">
+                                <h4 data-i18n="sol_1_title">مساعد ذكي يفهمك</h4>
+                                <p data-i18n="sol_1_desc">يوجهك خطوة بخطوة ويطرح أسئلة ذكية لتحسين النتيجة</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <circle cx="16" cy="16" r="16" fill="url(#iconGradient2)" />
+                                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="solution-text">
+                                <h4 data-i18n="sol_2_title">لا حاجة لخبرة</h4>
+                                <p data-i18n="sol_2_desc">اكتب بلغتك الطبيعية - عربي أو إنجليزي</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <circle cx="16" cy="16" r="16" fill="url(#iconGradient3)" />
+                                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="solution-text">
+                                <h4 data-i18n="sol_3_title">كل شيء في مكان واحد</h4>
+                                <p data-i18n="sol_3_desc">منصة موحدة مع نظام credits عادل وشفاف</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-item">
+                            <div class="solution-icon">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <circle cx="16" cy="16" r="16" fill="url(#iconGradient4)" />
+                                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="solution-text">
+                                <h4 data-i18n="sol_4_title">جودة سينمائية مضمونة</h4>
+                                <p data-i18n="sol_4_desc">نتائج احترافية متسقة باستخدام أفضل المحركات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases" id="use-cases">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge" data-i18n="use_case_badge">🎯 لمن هذا؟</span>
+                <h2 class="section-title" data-i18n="use_case_title">AdGen لكل من يريد محتوى مذهل</h2>
+                <p class="section-subtitle" data-i18n="use_case_subtitle">مهما كان مجالك، AdGen يساعدك</p>
+            </div>
+
+            <div class="use-cases-grid">
+                <div class="use-case-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="use-case-icon">📊</div>
+                    <h3 data-i18n="use_case_1_title">للمسوقين</h3>
+                    <p data-i18n="use_case_1_desc">إعلانات سوشيال ميديا احترافية في دقائق</p>
+                    <ul class="use-case-benefits">
+                        <li data-i18n="use_case_b1">✓ حملات سريعة</li>
+                        <li data-i18n="use_case_b2">✓ A/B Testing</li>
+                        <li data-i18n="use_case_b3">✓ تكلفة أقل 10x</li>
+                    </ul>
+                    <div class="use-case-badge" data-i18n="use_case_pop">شائع</div>
+                </div>
+
+                <div class="use-case-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="use-case-icon">🎬</div>
+                    <h3 data-i18n="use_case_2_title">لصناع المحتوى</h3>
+                    <p data-i18n="use_case_2_desc">فيديوهات سينمائية بدون معدات</p>
+                    <ul class="use-case-benefits">
+                        <li data-i18n="use_case_b4">✓ قوالب جاهزة</li>
+                        <li data-i18n="use_case_b5">✓ محتوى يومي</li>
+                        <li data-i18n="use_case_b6">✓ جودة احترافية</li>
+                    </ul>
+                    <div class="use-case-badge" data-i18n="use_case_create">مبدعين</div>
+                </div>
+
+                <div class="use-case-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="use-case-icon">🚀</div>
+                    <h3 data-i18n="use_case_3_title">للشركات الناشئة</h3>
+                    <p data-i18n="use_case_3_desc">محتوى تسويقي بدون فريق كامل</p>
+                    <ul class="use-case-benefits">
+                        <li data-i18n="use_case_b7">✓ توفير 80% ميزانية</li>
+                        <li data-i18n="use_case_b8">✓ إطلاق سريع</li>
+                        <li data-i18n="use_case_b9">✓ تجربة بلا حدود</li>
+                    </ul>
+                    <div class="use-case-badge" data-i18n="use_case_econ">اقتصادي</div>
+                </div>
+
+                <div class="use-case-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="use-case-icon">🎨</div>
+                    <h3 data-i18n="use_case_4_title">للمصممين</h3>
+                    <p data-i18n="use_case_4_desc">حوّل تصاميمك إلى موشن</p>
+                    <ul class="use-case-benefits">
+                        <li data-i18n="use_case_b10">✓ تحريك البورتفوليو</li>
+                        <li data-i18n="use_case_b11">✓ توسيع الخدمات</li>
+                        <li data-i18n="use_case_b12">✓ تسليم أسرع</li>
+                    </ul>
+                    <div class="use-case-badge" data-i18n="use_case_prof">احترافي</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge success" data-i18n="feat_badge">⚡ القوة الحقيقية</span>
+                <h2 class="section-title" data-i18n="feat_title">مميزات استثنائية تجعلنا الأفضل</h2>
+                <p class="section-subtitle" data-i18n="feat_subtitle">تقنيات متقدمة وذكاء حقيقي في خدمتك</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🧠<div class="icon-glow"></div>
+                    </div>
+                    <h3 data-i18n="feat_1_title">المساعد الذكي</h3>
+                    <p data-i18n="feat_1_desc">Gemini 3 powered - يفكر، يحلل ويقترح بثقة 0-100</p>
+                    <ul class="feature-list">
+                        <li>✓ Multi-turn conversation</li>
+                        <li>✓ Vision-enabled</li>
+                        <li data-i18n="hero_stat_uptime">معرفة سينمائية</li>
+                    </ul>
+                    <div class="feature-overlay"></div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🎬<div class="icon-glow"></div>
+                    </div>
+                    <h3 data-i18n="feat_2_title">محركات متعددة</h3>
+                    <p data-i18n="feat_2_desc">Kling AI + Gemini Flash - كل شيء في منصة واحدة</p>
+                    <ul class="feature-list">
+                        <li>✓ Text-to-Video</li>
+                        <li>✓ Image-to-Video</li>
+                        <li>✓ Smart Repair</li>
+                    </ul>
+                    <div class="feature-overlay"></div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">👁️<div class="icon-glow"></div>
+                    </div>
+                    <h3 data-i18n="feat_3_title">رؤية ذكية</h3>
+                    <p data-i18n="feat_3_desc">تحليل جودة تلقائي واقتراحات إصلاح فورية</p>
+                    <ul class="feature-list">
+                        <li>✓ Quality scoring</li>
+                        <li>✓ Visual lineage</li>
+                        <li>✓ Multi-modal context</li>
+                    </ul>
+                    <div class="feature-overlay"></div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">💰<div class="icon-glow"></div>
+                    </div>
+                    <h3 data-i18n="feat_4_title">نظام مالي محكم</h3>
+                    <p data-i18n="feat_4_desc">معاملات ذرية واسترجاع تلقائي عند الأخطاء</p>
+                    <ul class="feature-list">
+                        <li>✓ Atomic transactions</li>
+                        <li>✓ Auto-refund</li>
+                        <li>✓ RevenueCat</li>
+                    </ul>
+                    <div class="feature-overlay"></div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">🌐<div class="icon-glow"></div>
+                    </div>
+                    <h3 data-i18n="feat_5_title">عربي كامل</h3>
+                    <p data-i18n="feat_5_desc">دعم التشكيل للـ Voiceover - هوية عربية أصيلة</p>
+                    <ul class="feature-list">
+                        <li data-i18n="feat_5_desc">✓ UI مترجم 100%</li>
+                        <li>✓ AI بالعربية</li>
+                        <li>✓ RTL Support</li>
+                    </ul>
+                    <div class="feature-overlay"></div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🔄<div class="icon-glow"></div>
+                    </div>
+                    <h3 data-i18n="feat_6_title">Real-Time</h3>
+                    <p data-i18n="feat_6_desc">WebSocket sync وFCM notifications فورية</p>
+                    <ul class="feature-list">
+                        <li>✓ Socket.io</li>
+                        <li>✓ Live updates</li>
+                        <li>✓ Job tracking</li>
+                    </ul>
+                    <div class="feature-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Timeline -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge" data-i18n="how_badge">🔧 بساطة مذهلة</span>
+                <h2 class="section-title" data-i18n="how_title">كيف يعمل AdGen AI؟</h2>
+                <p class="section-subtitle" data-i18n="how_subtitle">من الفكرة للنتيجة في 6 خطوات</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="step_1_title">ابدأ المحادثة</h3>
+                        <p data-i18n="step_1_desc">اكتب فكرتك بلغتك الطبيعية</p>
+                        <div class="timeline-icon">💬</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="step_2_title">المساعد يفهم</h3>
+                        <p data-i18n="step_2_desc">يطرح أسئلة ذكية لتحسين الرؤية</p>
+                        <div class="timeline-icon">🧠</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="step_3_title">اختيار الأداة</h3>
+                        <p data-i18n="step_3_desc">صور، فيديو، أو تمديد</p>
+                        <div class="timeline-icon">🎨</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="step_4_title">تخصيص دقيق</h3>
+                        <p data-i18n="step_4_desc">Console متقدم أو اتركها للذكاء</p>
+                        <div class="timeline-icon">⚙️</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="step_5_title">توليد فوري</h3>
+                        <p data-i18n="step_5_desc">تتبع حي مع إشعارات</p>
+                        <div class="timeline-icon">⚡</div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-number">6</div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="step_6_title">نتيجة احترافية</h3>
+                        <p data-i18n="step_6_desc">جودة سينمائية جاهزة</p>
+                        <div class="timeline-icon">🎬</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack" id="tech-stack">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge" data-i18n="tech_badge">💻 القوة التقنية</span>
+                <h2 class="section-title" data-i18n="tech_title">مبني بأحدث التقنيات</h2>
+                <p class="section-subtitle" data-i18n="tech_subtitle">معمارية احترافية إنتاجية</p>
+            </div>
+            <div class="tech-categories">
+                <div class="tech-category" data-aos="fade-up">
+                    <h3 data-i18n="tech_back">⚙️ Backend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo">🟢</div><span>NestJS 11</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🐘</div><span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">📊</div><span>Prisma ORM</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🔥</div><span>BullMQ</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🤖</div><span>Gemini 3</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🎬</div><span>Kling AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-category" data-aos="fade-up">
+                    <h3 data-i18n="tech_front">📱 Frontend</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo">🐦</div><span>Flutter 3.9+</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🎨</div><span>Riverpod 3.0</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🔌</div><span>Socket.io</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🌐</div><span>Slang i18n</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3 data-i18n="tech_infra">🏗️ Infrastructure</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-logo">🔔</div><span>Firebase FCM</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">💳</div><span>RevenueCat</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🔒</div><span>JWT Auth</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-logo">🛡️</div><span>Helmet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge success" data-i18n="pricing_badge">💎 التسعير</span>
+                <h2 class="section-title" data-i18n="price_title">باقات تناسب الجميع</h2>
+                <p class="section-subtitle" data-i18n="price_subtitle">نظام credits عادل وشفاف</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-icon">🚀</div>
+                    <h3 data-i18n="plan_starter">Starter Pack</h3>
+                    <div class="pricing-amount">
+                        <span class="amount">50</span>
+                        <span class="currency">Credit</span>
+                    </div>
+                    <p class="pricing-desc" data-i18n="price_trial">مثالي للتجربة</p>
+                    <ul class="pricing-features">
+                        <li>✓ 50 رصيد</li>
+                        <li>✓ جميع المحركات</li>
+                        <li>✓ جودة HD</li>
+                    </ul>
+                    <button class="btn btn-outline btn-lg" data-i18n="plan_select">اختر الباقة</button>
+                </div>
+                <div class="pricing-card popular" data-aos="fade-up">
+                    <div class="popular-badge" data-i18n="price_pop">الأكثر شيوعاً</div>
+                    <div class="pricing-icon">💎</div>
+                    <h3 data-i18n="plan_pro">Pro Pack</h3>
+                    <div class="pricing-amount">
+                        <span class="amount">200</span>
+                        <span class="currency">Credit</span>
+                    </div>
+                    <p class="pricing-desc" data-i18n="price_pro">للمحترفين</p>
+                    <ul class="pricing-features">
+                        <li>✓ 200 رصيد</li>
+                        <li>✓ أولوية معالجة</li>
+                        <li>✓ جودة 4K</li>
+                    </ul>
+                    <button class="btn btn-primary btn-lg" data-i18n="plan_select">اختر الباقة</button>
+                </div>
+                <div class="pricing-card" data-aos="fade-up">
+                    <div class="pricing-icon">🏢</div>
+                    <h3 data-i18n="plan_agency">Agency Pack</h3>
+                    <div class="pricing-amount">
+                        <span class="amount">500</span>
+                        <span class="currency">Credit</span>
+                    </div>
+                    <p class="pricing-desc" data-i18n="price_agency">للفرق</p>
+                    <ul class="pricing-features">
+                        <li>✓ 500 رصيد</li>
+                        <li>✓ دعم مخصص</li>
+                        <li>✓ API Access</li>
+                    </ul>
+                    <button class="btn btn-outline btn-lg" data-i18n="plan_select">اختر الباقة</button>
+                </div>
+            </div>
+            <div class="pricing-note" data-aos="fade-up">
+                <p data-i18n="price_note_1">💡 <strong>نظام الإحالة:</strong> 20% عمولة!</p>
+                <p data-i18n="price_note_2">🔄 <strong>استرجاع تلقائي</strong> عند فشل المهمة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header-center" data-aos="fade-up">
+                <span class="section-badge" data-i18n="faq_badge">❓ الأسئلة الشائعة</span>
+                <h2 class="section-title" data-i18n="faq_title">هل لديك سؤال؟</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq_q1">هل يدعم اللغة العربية بالكامل؟</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a1">نعم! مصمم للعرب من الأساس مع دعم التشكيل الكامل.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq_q2">كيف يتم احتساب التكلفة؟</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a2">نظام تسعير ديناميكي شفاف - التكلفة تظهر قبل التنفيذ.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq_q3">ماذا يحدث إذا فشلت المهمة؟</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a3">استرجاع تلقائي فوري للرصيد - نستخدم معاملات ذرية لضمان عدم فقدان أي رصيد.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq_q4">ما هي المحركات (Engines) المدعومة؟</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a4">حالياً ندعم: <strong>Kling AI</strong> لتوليد الفيديوهات (T2V, I2V,
+                            Extension)،
+                            و<strong>Google Gemini Flash</strong> للصور الذكية. نعمل على إضافة Runway وPika Labs قريباً!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq_q5">هل البيانات والمحتوى آمن؟</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a5">نعم! جميع الاتصالات مشفرة، المدفوعات عبر RevenueCat الآمن، وملفاتك على
+                            Cloudflare R2 مع
+                            backup. ملتزمون بـ GDPR.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h4 data-i18n="faq_q6">هل يعمل على iOS وAndroid؟</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_a6">نعم! مبني بـ Flutter - يعمل على iOS وAndroid بنفس الجودة. نُخطط لWeb
+                            قريباً.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-final">
+        <div class="cta-background">
+            <div class="cta-orb cta-orb-1"></div>
+            <div class="cta-orb cta-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title" data-i18n="cta_final_title">جاهز لتحويل أفكارك إلى واقع مذهل؟</h2>
+                <p class="cta-subtitle" data-i18n="cta_final_subtitle">انضم لآلاف المبدعين الذين يستخدمون AdGen</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-xl">
+                        <span data-i18n="cta_final_btn">ابدأ مجاناً الآن</span>
+                    </button>
+                    <button class="btn btn-outline-white btn-xl">
+                        <span data-i18n="cta_final_chat">تحدث معنا</span>
+                    </button>
+                </div>
+                <div class="cta-stats">
+                    <div class="cta-stat"><strong>10K+</strong><span data-i18n="footer_user">مستخدم</span></div>
+                    <div class="cta-stat"><strong>50K+</strong><span data-i18n="footer_content_count">محتوى</span></div>
+                    <div class="cta-stat"><strong>99.9%</strong><span data-i18n="footer_sat">رضا</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40">
+                            <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" fill="url(#logoGradient)" />
+                            <circle cx="20" cy="20" r="5" fill="white" />
+                        </svg>
+                        <span>AdGen AI</span>
+                    </div>
+                    <p class="footer-desc" data-i18n="footer_desc">ذكاء اصطناعي لتوليد محتوى سينمائي</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/feras-swed-722383205/" target="_blank"
+                            title="LinkedIn">in</a>
+                        <a href="https://wa.me/967737972946" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer_product">المنتج</h4>
+                    <ul>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#pricing">التسعير</a></li>
+                        <li><a href="#how-it-works">كيف يعمل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer_support">الدعم</h4>
+                    <ul>
+                        <li><a href="#">المساعدة</a></li>
+                        <li><a href="#faq" data-i18n="nav_faq">الأسئلة</a></li>
+                        <li><a href="https://wa.me/967737972946" target="_blank" data-i18n="footer_contact">تواصل
+                                معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer_legal">القانوني</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">الخصوصية</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">الشروط</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2026 AdGen AI. جميع الحقوق محفوظة.</p>
+                <p class="made-with" data-i18n="footer_made">صُنع بواسطة فراس سويد <span class="heart">❤️</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="للأعلى" data-i18n="back_to_top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+    </button>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_text">نستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة على منصتنا الذكية.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="btn btn-primary btn-sm" id="acceptCookies" data-i18n="cookie_accept">موافق</button>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div class="modal-overlay" id="demoModal">
+        <div class="modal-content">
+            <div class="modal-close" id="modalClose">✕</div>
+            <div class="video-container">
+                <!-- Using a placeholder cinematic AI video or descriptive frame -->
+                <div
+                    style="width:100%;height:100%;background:linear-gradient(45deg, #0f111a, #1a1c2e);display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;text-align:center;padding:40px;">
+                    <h2 style="margin-bottom:20px;font-size:2.5rem;" data-i18n="demo_title">مستقبل الإنتاج الإعلاني</h2>
+                    <p style="opacity:0.7;max-width:600px;font-size:1.2rem;" data-i18n="demo_desc">شاهد كيف يحول AdGen
+                        AI الأفكار البسيطة إلى تحف سينمائية مذهلة باستخدام أقوى محركات الذكاء الاصطناعي في العالم.</p>
+                    <div
+                        style="margin-top:40px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;justify-content:center;align-items:center;cursor:pointer;border:1px solid rgba(255,255,255,0.2);">
+                        <div
+                            style="width: 0; height: 0; border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-left: 25px solid white; margin-left:8px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG Gradients Definitions -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <linearGradient id="iconGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6366F1" />
+                <stop offset="100%" style="stop-color:#8B5CF6" />
+            </linearGradient>
+            <linearGradient id="iconGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#EC4899" />
+                <stop offset="100%" style="stop-color:#F97316" />
+            </linearGradient>
+            <linearGradient id="iconGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#10B981" />
+                <stop offset="100%" style="stop-color:#3B82F6" />
+            </linearGradient>
+            <linearGradient id="iconGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#F59E0B" />
+                <stop offset="100%" style="stop-color:#EF4444" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/features.js"></script>
+    <script src="./assets/js/i18n.js"></script>
+    <script src="./assets/js/ai-showcase.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

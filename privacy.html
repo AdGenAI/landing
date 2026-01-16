@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="priv_title">AdGen AI - سياسة الخصوصية</title>
+    <meta name="description" content="سياسة الخصوصية لمنصة AdGen AI - كيف نحمي بياناتك">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/sections.css">
+    <link rel="stylesheet" href="./assets/css/animations.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body class="legal-page">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">
+            <svg width="100" height="100" viewBox="0 0 40 40">
+                <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" fill="url(#logoGradientPriv)" />
+                <circle cx="20" cy="20" r="5" fill="white" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Background Elements -->
+    <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <canvas id="particlesCanvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40">
+                    <defs>
+                        <linearGradient id="logoGradientPriv" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#6366F1" />
+                            <stop offset="100%" style="stop-color:#EC4899" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" fill="url(#logoGradientPriv)" />
+                    <circle cx="20" cy="20" r="5" fill="white" />
+                </svg>
+                <span class="logo-text">AdGen AI</span>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="index.html#features" class="nav-link" data-i18n="nav_features">المميزات</a>
+                <a href="index.html#pricing" class="nav-link" data-i18n="nav_pricing">التسعير</a>
+                <a href="index.html#faq" class="nav-link" data-i18n="nav_faq">الأسئلة</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="btn btn-secondary language-toggle" id="langToggle">
+                    <span data-i18n="lang_name">English</span>
+                </button>
+                <button class="btn btn-primary" data-i18n="nav_signup">ابدأ مجاناً</button>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="legal-container">
+        <header class="legal-header" data-aos="fade-up">
+            <h1 class="legal-title" data-i18n="priv_title">سياسة الخصوصية</h1>
+            <div class="legal-meta">
+                <span data-i18n="priv_last_update">آخر تحديث: يناير 2026</span>
+            </div>
+        </header>
+
+        <section class="legal-card" data-aos="fade-up">
+            <div class="legal-main-content">
+                <div class="legal-item">
+                    <div class="legal-icon-box">📄</div>
+                    <div class="legal-text-box">
+                        <h2 data-i18n="priv_intro_title">1. مقدمة</h2>
+                        <p data-i18n="priv_intro_desc">نحن في AdGen AI نلتزم بحماية خصوصيتك وبياناتك الشخصية. توضح هذه
+                            السياسة كيفية جمع واستخدام وحماية معلوماتك عند استخدام منصتنا.</p>
+                    </div>
+                </div>
+
+                <div class="legal-item">
+                    <div class="legal-icon-box">📊</div>
+                    <div class="legal-text-box">
+                        <h2 data-i18n="priv_data_title">2. البيانات التي نجمعها</h2>
+                        <p data-i18n="priv_data_desc">نجمع المعلومات التي تقدمها مباشرة عند إنشاء حساب، والبيانات
+                            التقنية المتعلقة باستخدامك للمنصة، والنصوص/الصور التي ترفعها لأغراض معالجة الذكاء الاصطناعي.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="legal-item">
+                    <div class="legal-icon-box">🤖</div>
+                    <div class="legal-text-box">
+                        <h2 data-i18n="priv_ai_title">3. معالجة الذكاء الاصطناعي</h2>
+                        <p data-i18n="priv_ai_desc">نستخدم محركات مثل Kling AI وGoogle Gemini. تتم معالجة بياناتك لغرض
+                            توليد المحتوى فقط، ولا يتم بيع بياناتك لأطراف خارجية لأغراض إعلانية.</p>
+                    </div>
+                </div>
+
+                <div class="legal-item">
+                    <div class="legal-icon-box">🛡️</div>
+                    <div class="legal-text-box">
+                        <h2 data-i18n="priv_security_title">4. أمن البيانات</h2>
+                        <p data-i18n="priv_security_desc">يتم تشفير جميع البيانات وتخزينها في بيئات آمنة باستخدام
+                            Cloudflare R2 وخدمات تشفير متطورة لضمان عدم الوصول غير المصرح به.</p>
+                    </div>
+                </div>
+
+                <div class="legal-item">
+                    <div class="legal-icon-box">⚖️</div>
+                    <div class="legal-text-box">
+                        <h2 data-i18n="priv_rights_title">5. حقوقك (GDPR)</h2>
+                        <p data-i18n="priv_rights_desc">لديك الحق في الوصول إلى بياناتك، تصحيحها، أو طلب مسحها تماماً من
+                            خوادمنا في أي وقت من خلال إعدادات الحساب.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40">
+                            <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" fill="url(#logoGradientPriv)" />
+                            <circle cx="20" cy="20" r="5" fill="white" />
+                        </svg>
+                        <span>AdGen AI</span>
+                    </div>
+                    <p class="footer-desc" data-i18n="footer_desc">ذكاء اصطناعي لتوليد محتوى سينمائي</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/feras-swed-722383205/" target="_blank"
+                            title="LinkedIn">in</a>
+                        <a href="https://wa.me/967737972946" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer_product">المنتج</h4>
+                    <ul>
+                        <li><a href="index.html#features">المميزات</a></li>
+                        <li><a href="index.html#pricing">التسعير</a></li>
+                        <li><a href="index.html#how-it-works">كيف يعمل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer_support">الدعم</h4>
+                    <ul>
+                        <li><a href="#">المساعدة</a></li>
+                        <li><a href="index.html#faq" data-i18n="nav_faq">الأسئلة</a></li>
+                        <li><a href="https://wa.me/967737972946" target="_blank" data-i18n="footer_contact">تواصل
+                                معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-i18n="footer_legal">القانوني</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">الخصوصية</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">الشروط</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2026 AdGen AI. جميع الحقوق محفوظة.</p>
+                <p class="made-with" data-i18n="footer_made">صُنع بواسطة فراس سويد <span class="heart">❤️</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="للأعلى" data-i18n="back_to_top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" fill="none" />
+        </svg>
+    </button>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_text">نستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة على منصتنا الذكية.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="btn btn-primary btn-sm" id="acceptCookies" data-i18n="cookie_accept">موافق</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/i18n.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
