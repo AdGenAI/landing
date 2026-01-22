@@ -15,14 +15,14 @@ const translations = {
         'nav_how_it_works': 'كيف يعمل',
         'nav_tech': 'التقنيات',
         'nav_login': 'دخول',
-        'nav_signup': 'ابدأ الآن',
+        'nav_signup': 'تواصل معنا',
         'nav_faq': 'الأسئلة',
 
         // Hero
         'hero_badge': 'مدعوم بـ Google Gemini 3 & Kling AI',
         'hero_title': 'خبير إبداعي في جيبك',
         'hero_subtitle': 'حوّل أفكارك إلى محتوى مرئي <strong>مذهل</strong> بمساعدة ذكاء اصطناعي <br class="hide-mobile">لا يكتفي بالتنفيذ - بل <strong>يفكر، يحلل ويبدع</strong>',
-        'hero_cta_primary': 'ابدأ الإنشاء مجاناً',
+        'hero_cta_primary': 'تواصل معنا الآن',
         'hero_cta_secondary': 'شاهد العرض التوضيحي',
         'hero_stat_creators': 'مستخدم نشط',
         'hero_stat_generated': 'محتوى مُولّد',
@@ -66,7 +66,7 @@ const translations = {
         'ai_feat_3_desc': 'من 45% إلى 95% ثقة',
         'ai_feat_4_title': 'عربي/إنجليزي',
         'ai_feat_4_desc': 'يفهم كلا اللغتين بطلاقة',
-        'ai_cta_smart': 'جرّب المساعد الذكي الآن',
+        'ai_cta_smart': 'تواصل معنا للبدء',
         'ai_cta_note': 'مجاناً - بدون بطاقة ائتمان',
 
         // Challenges & Solutions
@@ -170,7 +170,7 @@ const translations = {
         'plan_starter': 'Starter Pack',
         'plan_pro': 'Pro Pack',
         'plan_agency': 'Agency Pack',
-        'plan_select': 'اختر الباقة',
+        'plan_select': 'تواصل للاشتراك',
         'price_trial': 'مثالي للتجربة',
         'price_pro': 'للمحترفين',
         'price_agency': 'للفرق',
@@ -195,10 +195,13 @@ const translations = {
         'faq_a6': 'نعم! مبني بـ Flutter - يعمل على iOS وAndroid بنفس الجودة. نُخطط لـ Web قريباً.',
 
         // Final CTA
+        'reg_or': 'أو تواصل مباشرة عبر',
+        'reg_chat_now': 'دردشة فورية',
+        'reg_view_profile': 'الملف الشخصي',
         'cta_final_title': 'جاهز لتحويل أفكارك إلى واقع مذهل؟',
         'cta_final_subtitle': 'انضم لآلاف المبدعين الذين يستخدمون AdGen',
-        'cta_final_btn': 'ابدأ مجاناً الآن',
-        'cta_final_chat': 'تحدث معنا',
+        'cta_final_btn': 'تواصل معنا الآن',
+        'cta_final_chat': 'تواصل مباشر',
         'footer_user': 'مستخدم',
         'footer_content_count': 'محتوى',
         'footer_sat': 'رضا',
@@ -250,8 +253,20 @@ const translations = {
         // Premium UX Components
         'cookie_text': 'نستخدم ملفات تعريف الارتباط لضمان حصولك على أفضل تجربة على منصتنا الذكية.',
         'cookie_accept': 'موافق',
-        'demo_title': 'مستقبل الإنتاج الإعلاني',
-        'demo_desc': 'شاهد كيف يحول AdGen AI الأفكار البسيطة إلى تحف سينمائية مذهلة باستخدام أقوى محركات الذكاء الاصطناعي في العالم.'
+        'demo_desc': 'شاهد كيف يحول AdGen AI الأفكار البسيطة إلى تحف سينمائية مذهلة باستخدام أقوى محركات الذكاء الاصطناعي في العالم.',
+
+        // Registration Modal
+        'reg_title': 'تواصل مباشر مع فراس سويد',
+        'reg_subtitle': 'أرسل تفاصيلك الآن للانضمام المبكر للمنصة أو للاستفسار البرمجي',
+        'reg_name_label': 'اسمك الكريم',
+        'reg_name_placeholder': 'أدخل اسمك الكريم هنا...',
+        'reg_email_label': 'بريدك الإلكتروني',
+        'reg_email_placeholder': 'example@domain.com',
+        'reg_message_label': 'ماذا تريد أن تخبرنا؟',
+        'reg_message_placeholder': 'اكتب استفسارك أو رسالتك هنا...',
+        'reg_submit': 'إرسال عبر البريد الآن',
+        'reg_success': 'جاري توجيهك لتطبيق البريد...',
+        'reg_error': 'عذراً، حدث خطأ ما. حاول مرة أخرى.'
     },
     'en': {
         // Meta & Site Info
@@ -265,7 +280,7 @@ const translations = {
         'nav_how_it_works': 'How it Works',
         'nav_tech': 'Technologies',
         'nav_login': 'Login',
-        'nav_signup': 'Get Started',
+        'nav_signup': 'Contact Us',
         'nav_faq': 'FAQ',
 
         // Hero
@@ -420,7 +435,7 @@ const translations = {
         'plan_starter': 'Starter Pack',
         'plan_pro': 'Pro Pack',
         'plan_agency': 'Agency Pack',
-        'plan_select': 'Select Plan',
+        'plan_select': 'Contact Us',
         'price_trial': 'Perfect for trying',
         'price_pro': 'For professionals',
         'price_agency': 'For teams',
@@ -500,8 +515,20 @@ const translations = {
         // Premium UX Components
         'cookie_text': 'We use cookies to ensure you get the best experience on our smart platform.',
         'cookie_accept': 'Accept',
-        'demo_title': 'Future of Ad Production',
-        'demo_desc': 'Discover how AdGen AI transforms simple ideas into stunning cinematic masterpieces using the world\'s most powerful AI engines.'
+        'demo_desc': 'Discover how AdGen AI transforms simple ideas into stunning cinematic masterpieces using the world\'s most powerful AI engines.',
+
+        // Registration Modal
+        'reg_title': 'Direct Contact with Feras Swed',
+        'reg_subtitle': 'Send your details for early access or development inquiries',
+        'reg_name_label': 'Full Name',
+        'reg_name_placeholder': 'Enter your full name here...',
+        'reg_email_label': 'Email Address',
+        'reg_email_placeholder': 'example@domain.com',
+        'reg_message_label': 'How can we help you?',
+        'reg_message_placeholder': 'Write your message or inquiry here...',
+        'reg_submit': 'Send via Email Now',
+        'reg_success': 'Redirecting to your email client...',
+        'reg_error': 'Sorry, something went wrong. Please try again.'
     }
 };
 
@@ -547,11 +574,14 @@ class I18nManager {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (langData[key]) {
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    el.placeholder = langData[key];
-                } else {
-                    el.innerHTML = langData[key];
-                }
+                el.innerHTML = langData[key];
+            }
+        });
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (langData[key]) {
+                el.placeholder = langData[key];
             }
         });
 

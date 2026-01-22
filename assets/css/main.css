@@ -276,8 +276,6 @@ strong {
 }
 
 .nav-actions {
-    display: flex;
-    align-items: center;
     gap: var(--spacing-sm);
 }
 
@@ -1139,18 +1137,19 @@ strong {
     background: rgba(0, 0, 0, 0.96);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    z-index: 9999;
-    display: flex;
+    z-index: 10000;
+    display: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    transition: opacity 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+    pointer-events: none;
 }
 
 .modal-overlay.show {
+    display: flex !important;
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal-content {
@@ -1210,18 +1209,264 @@ strong {
     border: none;
 }
 
+/* Registration Modal Premium Design */
+.registration-modal-content {
+    max-width: 520px !important;
+    width: 90% !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    background: rgba(15, 23, 42, 0.9) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 32px !important;
+    padding: 40px 50px !important;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8),
+        0 0 50px rgba(99, 102, 241, 0.2) !important;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+.registration-modal-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.registration-modal-content::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 10px;
+}
+
+.registration-modal-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.registration-header h2 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.registration-header p {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-right: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 18px !important;
+    padding: 18px 24px !important;
+    color: #fff !important;
+    font-size: 1.05rem !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3),
+        inset 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(-2px) !important;
+}
+
+.registration-form .btn-primary {
+    padding: 22px !important;
+    border-radius: 18px !important;
+    font-weight: 800 !important;
+    font-size: 1.25rem !important;
+    margin-top: 15px !important;
+    background: var(--gradient-primary) !important;
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.35) !important;
+    border: none !important;
+    cursor: pointer;
+    transition: all 0.4s ease !important;
+}
+
+.registration-form .btn-primary:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 25px 50px rgba(99, 102, 241, 0.5) !important;
+    filter: brightness(1.2) !important;
+}
+
+.form-status {
+    text-align: center;
+    font-size: 1.05rem;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.form-status.success {
+    color: #10b981;
+}
+
+.form-status.error {
+    color: #ef4444;
+}
+
+/* Social Hub Styles */
+.modal-social-hub {
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.hub-divider {
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hub-divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.hub-divider span {
+    background: #111827;
+    padding: 0 15px;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.social-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.social-link-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-link-card.whatsapp:hover {
+    border-color: #25D366;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.1);
+}
+
+.social-link-card.linkedin:hover {
+    border-color: #0077B1;
+    box-shadow: 0 10px 20px rgba(0, 119, 177, 0.1);
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text span {
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.card-text small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
 @media (max-width: 768px) {
-    .cookie-banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 24px;
-        bottom: 16px;
+    .registration-modal-content {
+        padding: 40px 25px !important;
+        max-width: 95% !important;
     }
 
-    .custom-cursor,
-    .cursor-follower {
-        display: none;
+    .registration-header h2 {
+        font-size: 2rem;
     }
+
+    .social-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.custom-cursor,
+.cursor-follower {
+    display: none;
 }
 
 .legal-page .hero-background {

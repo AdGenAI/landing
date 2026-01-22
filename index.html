@@ -25,12 +25,33 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/sections.css">
-    <link rel="stylesheet" href="./assets/css/use-cases.css">
-    <link rel="stylesheet" href="./assets/css/ai-showcase.css">
-    <link rel="stylesheet" href="./assets/css/animations.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/main.css?v=1.3">
+    <link rel="stylesheet" href="./assets/css/sections.css?v=1.3">
+    <link rel="stylesheet" href="./assets/css/use-cases.css?v=1.3">
+    <link rel="stylesheet" href="./assets/css/ai-showcase.css?v=1.3">
+    <link rel="stylesheet" href="./assets/css/animations.css?v=1.3">
+    <link rel="stylesheet" href="./assets/css/responsive.css?v=1.4">
+
+    <!-- Inline Fail-safe Script -->
+    <script>
+        window.openContactModal = function (e) {
+            if (e) e.preventDefault();
+            const modal = document.getElementById('registrationModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        window.closeContactModal = function (e) {
+            if (e) e.preventDefault();
+            const modal = document.getElementById('registrationModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        };
+    </script>
 
     <!-- AOS Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -82,7 +103,8 @@
                 <button class="btn btn-secondary language-toggle" id="langToggle">
                     <span data-i18n="lang_name">English</span>
                 </button>
-                <button class="btn btn-primary" data-i18n="nav_signup">ابدأ مجاناً</button>
+                <button class="btn btn-primary" data-i18n="nav_signup" data-trigger-reg="true"
+                    onclick="window.openContactModal(event)">تواصل معنا</button>
             </div>
 
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -121,8 +143,9 @@
                     </p>
 
                     <div class="hero-cta">
-                        <button class="btn btn-primary btn-lg">
-                            <span data-i18n="hero_cta_primary">ابدأ الإنشاء مجاناً</span>
+                        <button class="btn btn-primary btn-lg" data-trigger-reg="true"
+                            onclick="window.openContactModal(event)">
+                            <span data-i18n="hero_cta_primary">تواصل معنا الآن</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M10 5L17 12L10 19" stroke="currentColor" stroke-width="2" fill="none" />
                             </svg>
@@ -388,8 +411,9 @@
 
             <!-- CTA -->
             <div class="ai-cta" data-aos="fade-up" data-aos-delay="500">
-                <button class="btn btn-primary btn-xl glow-btn">
-                    <span data-i18n="ai_cta_smart">جرّب المساعد الذكي الآن</span>
+                <button class="btn btn-primary btn-xl glow-btn" data-trigger-reg="true"
+                    onclick="window.openContactModal(event)">
+                    <span data-i18n="ai_cta_smart">تواصل معنا للبدء</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M10 5L17 12L10 19" stroke="currentColor" stroke-width="2" fill="none" />
                     </svg>
@@ -822,12 +846,8 @@
                         <span class="currency">Credit</span>
                     </div>
                     <p class="pricing-desc" data-i18n="price_trial">مثالي للتجربة</p>
-                    <ul class="pricing-features">
-                        <li>✓ 50 رصيد</li>
-                        <li>✓ جميع المحركات</li>
-                        <li>✓ جودة HD</li>
-                    </ul>
-                    <button class="btn btn-outline btn-lg" data-i18n="plan_select">اختر الباقة</button>
+                    <button class="btn btn-outline btn-lg" data-i18n="plan_select" data-trigger-reg="true"
+                        onclick="window.openContactModal(event)">تواصل معنا</button>
                 </div>
                 <div class="pricing-card popular" data-aos="fade-up">
                     <div class="popular-badge" data-i18n="price_pop">الأكثر شيوعاً</div>
@@ -843,7 +863,8 @@
                         <li>✓ أولوية معالجة</li>
                         <li>✓ جودة 4K</li>
                     </ul>
-                    <button class="btn btn-primary btn-lg" data-i18n="plan_select">اختر الباقة</button>
+                    <button class="btn btn-primary btn-lg" data-i18n="plan_select" data-trigger-reg="true"
+                        onclick="window.openContactModal(event)">تواصل معنا</button>
                 </div>
                 <div class="pricing-card" data-aos="fade-up">
                     <div class="pricing-icon">🏢</div>
@@ -853,12 +874,8 @@
                         <span class="currency">Credit</span>
                     </div>
                     <p class="pricing-desc" data-i18n="price_agency">للفرق</p>
-                    <ul class="pricing-features">
-                        <li>✓ 500 رصيد</li>
-                        <li>✓ دعم مخصص</li>
-                        <li>✓ API Access</li>
-                    </ul>
-                    <button class="btn btn-outline btn-lg" data-i18n="plan_select">اختر الباقة</button>
+                    <button class="btn btn-outline btn-lg" data-i18n="plan_select" data-trigger-reg="true"
+                        onclick="window.openContactModal(event)">تواصل معنا</button>
                 </div>
             </div>
             <div class="pricing-note" data-aos="fade-up">
@@ -955,10 +972,12 @@
                 <h2 class="cta-title" data-i18n="cta_final_title">جاهز لتحويل أفكارك إلى واقع مذهل؟</h2>
                 <p class="cta-subtitle" data-i18n="cta_final_subtitle">انضم لآلاف المبدعين الذين يستخدمون AdGen</p>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary btn-xl">
-                        <span data-i18n="cta_final_btn">ابدأ مجاناً الآن</span>
+                    <button class="btn btn-primary btn-xl" data-trigger-reg="true"
+                        onclick="window.openContactModal(event)">
+                        <span data-i18n="hero_cta_primary">تواصل معنا الآن</span>
                     </button>
-                    <button class="btn btn-outline-white btn-xl">
+                    <button class="btn btn-outline-white btn-xl" data-trigger-reg="true"
+                        onclick="window.openContactModal(event)">
                         <span data-i18n="cta_final_chat">تحدث معنا</span>
                     </button>
                 </div>
@@ -1061,6 +1080,65 @@
         </div>
     </div>
 
+    <!-- Registration/Contact Modal -->
+    <div class="modal-overlay" id="registrationModal">
+        <div class="modal-content registration-modal-content">
+            <div class="modal-close" id="regModalClose" onclick="window.closeContactModal(event)">✕</div>
+            <div class="registration-container">
+                <div class="registration-header">
+                    <h2 data-i18n="reg_title">انضم لقائمة الانتظار</h2>
+                    <p data-i18n="reg_subtitle">كن أول من يختبر مستقبل الإنتاج الإعلاني</p>
+                </div>
+                <form class="registration-form" id="registrationForm">
+                    <div class="form-group">
+                        <label for="regName" data-i18n="reg_name_label">الاسم الكامل</label>
+                        <input type="text" id="regName" name="name" required placeholder="أدخل اسمك الكريم هنا..."
+                            data-i18n-placeholder="reg_name_placeholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail" data-i18n="reg_email_label">البريد الإلكتروني</label>
+                        <input type="email" id="regEmail" name="email" required placeholder="example@domain.com"
+                            data-i18n-placeholder="reg_email_placeholder">
+                    </div>
+                    <div class="form-group">
+                        <label for="regMessage" data-i18n="reg_message_label">رسالة قصيرة</label>
+                        <textarea id="regMessage" name="message" rows="3" placeholder="اكتب استفسارك أو رسالتك هنا..."
+                            data-i18n-placeholder="reg_message_placeholder"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="regSubmitBtn">
+                        <span data-i18n="reg_submit">إرسال الطلب</span>
+                        <div class="btn-loader" id="btnLoader" style="display: none;"></div>
+                    </button>
+                    <p class="form-status" id="formStatus"></p>
+                </form>
+
+                <!-- Direct Contact Hub -->
+                <div class="modal-social-hub">
+                    <div class="hub-divider">
+                        <span data-i18n="reg_or">أو تواصل مباشرة عبر</span>
+                    </div>
+                    <div class="social-links-grid">
+                        <a href="https://wa.me/967737972946" target="_blank" class="social-link-card whatsapp">
+                            <div class="card-icon">💬</div>
+                            <div class="card-text">
+                                <span>WhatsApp</span>
+                                <small data-i18n="reg_chat_now">دردشة فورية</small>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/feras-swed-722383205/" target="_blank"
+                            class="social-link-card linkedin">
+                            <div class="card-icon">in</div>
+                            <div class="card-text">
+                                <span>LinkedIn</span>
+                                <small data-i18n="reg_view_profile">الملف الشخصي</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- SVG Gradients Definitions -->
     <svg width="0" height="0" style="position: absolute;">
         <defs>
@@ -1087,12 +1165,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/utils.js"></script>
-    <script src="./assets/js/animations.js"></script>
-    <script src="./assets/js/features.js"></script>
-    <script src="./assets/js/i18n.js"></script>
-    <script src="./assets/js/ai-showcase.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/utils.js?v=1.5"></script>
+    <script src="./assets/js/animations.js?v=1.5"></script>
+    <script src="./assets/js/features.js?v=1.5"></script>
+    <script src="./assets/js/i18n.js?v=1.5"></script>
+    <script src="./assets/js/ai-showcase.js?v=1.5"></script>
+    <script src="./assets/js/main.js?v=1.5"></script>
 </body>
 
 </html>

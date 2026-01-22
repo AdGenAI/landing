@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initScrollReveal();
     initSmoothScroll();
+    initRegistrationModal();
+
+    // Final check for all triggers
+    console.log('✅ AdGen AI Fully Loaded & Optimized');
 });
 
 // ============================================
@@ -133,6 +137,83 @@ function initDemoModal() {
             if (e.target === demoModal) closeModal();
         });
     }
+}
+
+// ============================================
+// Premium UX: Registration Modal (Email Client Integration)
+// ============================================
+function initRegistrationModal() {
+    const triggerBtns = document.querySelectorAll('[data-trigger-reg="true"]');
+    const regModal = document.getElementById('registrationModal');
+    const modalClose = document.getElementById('regModalClose');
+    const form = document.getElementById('registrationForm');
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('regSubmitBtn');
+    const loader = document.getElementById('btnLoader');
+
+    if (!regModal || !modalClose || !form) return;
+
+    console.log('🚀 Registration Modal Initialized for [ferasswed2022@gmail.com]');
+
+    const openModal = (e) => {
+        if (e) e.preventDefault();
+        regModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        regModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        form.reset();
+        status.textContent = '';
+        status.className = 'form-status';
+    };
+
+    // Robust Event Delegation
+    document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-trigger-reg="true"]');
+        if (trigger) {
+            console.log('🎯 Global Capture: Trigger Clicked');
+            openModal(e);
+        }
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    regModal.addEventListener('click', (e) => {
+        if (e.target === regModal) closeModal();
+    });
+
+    // Premium UX: Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && regModal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        const ownerEmail = 'ferasswed2022@gmail.com';
+        const subject = encodeURIComponent(`AdGen AI - Registration: ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+        // Construct Mailto Link
+        const mailtoLink = `mailto:${ownerEmail}?subject=${subject}&body=${body}`;
+
+        // Feedback
+        status.textContent = (window.i18n && window.i18n.currentLang === 'ar') ? 'يتم فتح تطبيق البريد الآن...' : 'Opening email client...';
+        status.className = 'form-status success';
+
+        // Direct redirection to mail client
+        window.location.href = mailtoLink;
+
+        setTimeout(closeModal, 2000);
+    });
 }
 
 // ============================================
